@@ -1,4 +1,5 @@
 import os
+from tkinter import IntVar
 if not os.path.exists('config.txt'):
     print('config.txt does not exist! im creating it')
     with open('config.txt', 'a') as f:
@@ -70,7 +71,6 @@ was_pressed_a = False
 
 
 print('injected with base', hex(modloader.getBaseAddress()),'pid:', hex(modloader.getProcessId()))
-
 
 while True:
     speedhack = modloader.getSpeedhack()
