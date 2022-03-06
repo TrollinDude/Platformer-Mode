@@ -37,6 +37,27 @@ from sys import exit as sysexit
 import time
 from pygdmod.pygdmod import *
 from requests import get as requestsget
+import tkinter as tk
+import _thread
+
+#Gui
+toggled = 0
+
+def main(useless1,useless2):
+
+    def changestate():
+        global toggled
+        if toggled == 1:
+            toggled = 0
+        else: toggled = 1
+
+    top = tk.Tk()
+    C1 = tk.Checkbutton(top, text = "Toggle Platformer Mode", command=changestate)
+    C1.grid()
+
+    top.mainloop()
+
+_thread.start_new_thread(main, (1,1))
 
 current_ver = 3
 
@@ -138,7 +159,7 @@ while True:
         nocheckpoint = 1
 
     #fix for being able to go before 0 and respawning on check points
-    if xpos >= 1 and not isDead:
+    if xpos >= 1 and not isDead and toggled == 1:
         modloader.setXpos(pos=xpos, player='both') # set xpos of both players
     else:
         try:
