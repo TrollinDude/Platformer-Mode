@@ -1,6 +1,7 @@
 from tkinter import *
 import tkinter
 import _thread
+import time
 
 toggled = 0
 
@@ -24,5 +25,5 @@ while True:
     try:
         print(toggled)
     except:
-        ()
-#test
+        pass
+    time.sleep(.3)
