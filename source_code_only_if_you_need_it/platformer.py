@@ -47,9 +47,14 @@ def main(useless1,useless2):
 
     def changestate():
         global toggled
+        global xpos
         if toggled == 1:
             toggled = 0
-        else: toggled = 1
+        else:  
+            xpos = modloader.getXpos(1)
+            toggled = 1
+
+
 
     top = tk.Tk()
     C1 = tk.Checkbutton(top, text = "Toggle Platformer Mode", command=changestate)
