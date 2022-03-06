@@ -26,4 +26,4 @@ while True:
         print(toggled)
     except:
         pass
-    time.sleep(.3)
+    time.sleep(.4)
