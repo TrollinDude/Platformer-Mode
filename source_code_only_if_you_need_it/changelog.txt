@@ -1,1 +1,0 @@
-added a very basic gui which allows you to toggle platformer mode at will

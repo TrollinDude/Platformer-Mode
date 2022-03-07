@@ -44,6 +44,7 @@ from tkinter import ttk
 import _thread
 import webbrowser
 
+
 #Gui
 toggled = 0
 
