@@ -44,7 +44,6 @@ from tkinter import ttk
 import _thread
 import webbrowser
 
-
 #Gui
 toggled = 0
 
@@ -125,7 +124,7 @@ def checkforupdate():
             try: updatestatus.config(text="You are running the latest version")
             except:()
     except:
-        print('Failed to check for updates!!!!')
+        updatestatus.config(text="Failed to check for updates!")
 
 loop_init = False
 xpos = 0
