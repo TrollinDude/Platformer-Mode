@@ -1,0 +1,2 @@
+smoothing_iterations 10
+loop_sleep_time 0.0001

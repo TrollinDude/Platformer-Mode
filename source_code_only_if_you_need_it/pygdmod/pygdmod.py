@@ -266,3 +266,7 @@ class GeometryDashModloader:
     def setAttempt(self, attempt: int) -> None:
         attemptPtr = Find_Pointer(self.base_address, 0x3222D0, [0x164, 0x4A8])
         Write_Mem(address=attemptPtr, New_Value=attempt, float_or_int=0)
+        
+    def setSpeedHack(self, SpeedHack: float) -> None:
+        SpeedHackPtr = Find_Pointer(self.base_address, 0x3222D0, [0xCC, 0x20])
+        Write_Mem(address=SpeedHackPtr, New_Value=SpeedHack, float_or_int=1)

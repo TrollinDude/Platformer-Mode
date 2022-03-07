@@ -4,8 +4,7 @@ from win32api import OpenProcess, CloseHandle
 from win32process import EnumProcesses, GetModuleFileNameEx, EnumProcessModules
 from ctypes import byref, sizeof, c_uint, windll
 from ReadWriteMemory import ReadWriteMemory
-from pymem import *
-from pymem.process import *
+from pymem import Pymem
 
 def Get_Process(process_name):
     global processt
