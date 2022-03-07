@@ -124,7 +124,7 @@ def checkforupdate():
             textt = "You are using a out of date version. Click here to download the newest version"
             try: 
                 updatestatus.config(text=str(textt), fg="blue", cursor="hand2") 
-                updatestatus.bind("<Button-1>", lambda e: callback("https://github.com/TrollinDude/pl_mode/releases"))
+                updatestatus.bind("<Button-1>", lambda e: callback("https://github.com/TrollinDude/Platformer-Mode/releases"))
             except:()
         else:
             try: updatestatus.config(text="You are running the latest version")
