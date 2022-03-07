@@ -1,5 +1,5 @@
 import os
-
+running = True
 if not os.path.exists('config.txt'):
     print('config.txt does not exist! im creating it')
     with open('config.txt', 'a') as f:
@@ -97,6 +97,12 @@ def main(useless1,useless2):
     updatestatus = tk.Label(window, text=" ")
     updatestatus.place(relx=.5, rely=.92, anchor="center")
 
+    def close_window():
+        global running
+        running = False 
+
+    window.protocol("WM_DELETE_WINDOW", close_window)
+
     window.mainloop()
 
 #end of gui
@@ -160,7 +166,7 @@ while True:
         smooth_iter = smooth_iter_c
     elif was_pressed_d:
         try:
-            xpos += smooth_iter * dt * 60 / speedhack / smooth_iter
+            xpos += smooth_iter * dt * 60 * speedhack / smooth_iter
         except:
             was_pressed_d = False
         smooth_iter -= 1
@@ -173,7 +179,7 @@ while True:
         smooth_iter = smooth_iter_c
     elif was_pressed_a:
         try:
-            xpos -= smooth_iter * dt * 60 / speedhack/smooth_iter
+            xpos -= smooth_iter * dt * 60 * speedhack / smooth_iter
         except:
             was_pressed_a = False
         smooth_iter -= 1
@@ -251,6 +257,9 @@ while True:
     if loop_init == False:
         speedhacklbl.config(text="Set Speedhack: 1")
         modloader.setSpeedHack(1)
+
+    if running == False:
+        sysexit()
 
     # not hog cpu
     loop_init = True
