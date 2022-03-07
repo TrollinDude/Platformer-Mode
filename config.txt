@@ -1,2 +1,3 @@
 smoothing_iterations 10
 loop_sleep_time 0.0001
+default smoothing_iterations is 10 and default loop_sleep_time is 0.0001 which does not need to be changed
