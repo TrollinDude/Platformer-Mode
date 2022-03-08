@@ -1,3 +1,4 @@
 smoothing_iterations 10
-loop_sleep_time 0.0001
-default smoothing_iterations is 10 and default loop_sleep_time is 0.0001 which does not need to be changed
+fps 60
+#smooting_iterations default is 10 and this value changes the way the movement smoothing works
+#the default fps is 60 and increasing this will make the program run faster allowing you to use higher fps in gd but this is at the cost of cpu usage
